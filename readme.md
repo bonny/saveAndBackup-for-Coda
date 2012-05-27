@@ -1,12 +1,9 @@
 # Plugin for Coda
-For Coda 1 only so far.
-Version for Coda 2 version will be here shortly.
+This is a plugin for Coda 2. 
 
-## Features
-* Feature one
-* And two
-* and so on
+# OMG THERE IS A BUG
+Yes. Indeed there is; there is a bug in Coda 2 that makes the backup files only partially saved when using folding.
 
-## What else
-* A screnshot perhaps
+# Still using Coda 1?
+Check "Coda 1"-folder for a version compatible with Coda 1.
 
