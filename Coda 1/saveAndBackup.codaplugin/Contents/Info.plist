@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BuildMachineOSBuild</key>
-	<string>11E53</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -21,23 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.1</string>
 	<key>CodaPlugInMinimumAPIVersion</key>
-	<string>5</string>
-	<key>CodaPlugInSupportedAPIVersion</key>
-	<integer>6</integer>
-	<key>DTCompiler</key>
-	<string></string>
-	<key>DTPlatformBuild</key>
-	<string>4E2002</string>
-	<key>DTPlatformVersion</key>
-	<string>GM</string>
-	<key>DTSDKBuild</key>
-	<string>10K549</string>
-	<key>DTSDKName</key>
-	<string>macosx10.6</string>
-	<key>DTXcode</key>
-	<string>0432</string>
-	<key>DTXcodeBuild</key>
-	<string>4E2002</string>
+	<string>3</string>
 	<key>NSPrincipalClass</key>
 	<string>CodaScriptPlugIn</string>
 	<key>commands</key>
@@ -60,7 +42,7 @@
 			<key>preprocess</key>
 			<string>none</string>
 			<key>script</key>
-			<string>local-backup.pl</string>
+			<string>local-backup</string>
 			<key>uuid</key>
 			<string>06C6E0F7-5954-493E-B0B5-49321D788990</string>
 		</dict>
