@@ -1,0 +1,49 @@
+#!/usr/bin/perl 
+
+# Coda backup
+# PŠr Thernstršm <par.thernstrom@gmail.com>
+#
+# History
+# April 15, 2009: first version. Seems to work!
+
+
+# get whole document from stdin
+@doc = <STDIN>;
+$doc = join('', @doc);
+#print "Detta Šr doc:";
+#print 'This is doc:';
+#print $doc;
+#exit;
+#  CODA_SITE_LOCAL_PATH
+#The full local path for the Site associated with the document. May be empty if no Site is active, or the Site's local path hasn't been set. 
+
+# where to save the backup
+$savePath = $ENV{'HOME'} . "/coda_backups/";
+$saveSite = "";
+
+# get filename of current file
+@filepath = split(/\//, $ENV{'CODA_FILEPATH'});
+$filename = pop(@filepath);
+
+# get a date to prefix with
+($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+$time = sprintf "%4d-%02d-%02d %02d.%02d.%02d", $year+1900,$mon+1,$mday,$hour,$min,$sec;
+
+$saveDir = $savePath . $saveSite;
+$savePathAndName = $savePath . $saveSite . $time . " " . $filename;
+
+print "\nSaving backup to:\n" . $savePathAndName;
+
+# make sure backup dir exists
+mkdir "$saveDir", 0777 unless -d "$saveDir";
+
+# create and write to file
+open FILE, ">$savePathAndName" or die $!;
+print FILE $doc;
+close FILE;
+
+# print all env-variables
+#foreach (sort keys %ENV) {
+#	print "$_  =  $ENV{$_}\n";
+#}
+
